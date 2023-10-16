@@ -1,0 +1,305 @@
+/* ==================== FONTS ==================== */
+@font-face {
+    font-family: "Work Sans";
+    src: url(./Fonts/Work_Sans/WorkSans-VariableFont_wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(./Fonts/Open_Sans/OpenSans-VariableFont_wdth_wght.ttf) format(truetype);
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url(./Fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf) format(truetype);
+}
+
+/* ==================== CSS VARIABLES ==================== */
+:root{
+
+    /* ========== Colors ========== */
+    --first-color: hsl(23, 86%, 59%);
+    --second-color: hsl(192, 24%, 50%);
+    --third-color: hsl(125, 15%, 46%);
+    --text-color: hsl(51, 40%, 84%);
+    --body-color: hsl(211, 28%, 12%);
+
+
+    /* ========== Fonts and Typography ========== */
+    --title-font: "Playfair Display";
+    --subtitle-font: "Open Sans";
+    --body-font: "Work Sans";
+
+    --biggest-font-size: 7rem;
+    --big-font-size: 4rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --regular-font-size: .940rem;
+    --small-font-size: .810rem;
+
+    /* ========== Font weight ========== */
+    --regular-font: 400;
+    --medium-font: 500;
+    --semi-bold-font: 600;
+    --bold-font: 700;
+    --extra-bold-font: 800;
+
+    /* ========== z index ========== */
+    --z-index-fixed: 100;
+}
+
+/* ==================== BASE ==================== */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--body-color);
+    font-family: var(--body-font);
+    color: var(--text-color);
+}
+
+header{
+    width: 1680px;
+    margin: 10px auto;
+}
+
+main{
+    width: 1294px;
+    margin: 100px auto 110px auto;
+}
+
+footer{
+    width: 1680px;
+    margin: 10px auto;
+}
+
+h1{
+    font-family: var(--title-font);
+    font-size: var(--h1-font-size);
+    font-weight: var(--bold-font);
+    color: var(--first-color);
+}
+
+h2{
+    font-family: var(--subtitle-font);
+    font-size: var(--h2-font-size);
+    font-weight: var(--semi-bold-font);
+    color: var(--first-color);
+}
+
+h3{
+    font-family: var(--body-font);
+    font-size: var(--h3-font-size);
+    font-weight: var(--medium-font);
+}
+
+a h3{
+    position: relative;
+}
+
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+img{
+    display: inline-block;
+}
+
+/* ==================== HEADER ==================== */
+.header__hero{
+    position: relative;
+    height: 446px;
+    /* background-color: hsl(0, 0%, 7%); */
+    background-image: url(/img/img28.jpg);
+    background-size: 100%;
+    border-radius: 30px;
+}
+.navigation>li{
+    display: inline;
+    padding: 5px;
+}
+
+nav{
+    position: absolute;
+    top: 15px;
+    left: 30px;
+}
+
+.links{
+    border-radius: 5px;
+    transition: background-color .3s ease-in;
+}
+
+.links h3{
+    font-weight: var(--bold-font);
+    font-size: var(--h2-font-size);
+    padding: 10px;
+    text-shadow: 1px 1px 2px hsl(0, 0%, 7%);
+}
+
+.links__1 h3::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color:  var(--text-color);
+    transition: .3s ease-in-out;
+    transform: scale(0);
+}
+
+.links__1 h3:hover::after,
+.links__2 h3:hover::after,
+.links__3 h3:hover::after{
+    transform: scale(1);
+}
+
+.links__2 h3::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color:  var(--text-color);
+    transition: .3s ease-in-out;
+    transform: scale(0);
+}
+
+.links__3 h3::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color:  var(--text-color);
+    transition: .3s ease-in-out;
+    transform: scale(0);
+}
+
+.links:hover{
+    color:  var(--text-color);
+    background-color: var(--body-color);
+    border-radius: 5px;
+}
+
+.links__1 h3:hover::after,
+.links__2 h3:hover::after,
+.links__3 h3:hover::after{
+    transform: scale(1);
+}
+
+.logo{
+    text-align: left;
+    padding: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.logo h1{
+    text-shadow: 2px 2px 2px hsl(0, 0%, 7%);
+    margin-bottom: 20px;
+    font-size: var(--biggest-font-size);
+    color: var(--text-color);
+}
+
+.logo p{
+    font-size: var(--h2-font-size);
+    text-shadow: 1px 1px 2px hsl(0, 0%, 7%);
+}
+
+.picture{
+    width: 100px;
+    height: 100%;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+/* ==================== MAIN ==================== */
+.title__section{
+    font-family: var(--title-font);
+    font-size: var(--big-font-size);
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.colors__section{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.colors{
+    width: 32%;
+    height: 150px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.colors div{
+    height: 100%;
+}
+
+.colors p{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: var(--h2-font-size);
+}
+
+.colors span{
+    font-weight: var(--bold-font);
+}
+
+.pumpkin{
+    background-color: hsl(23, 86%, 59%);
+}
+
+.pearl{
+    background-color: hsl(51, 40%, 84%);
+}
+
+.pearl p{
+    color: var(--body-color);
+}
+
+.gunmetal{
+    background-color: hsl(211, 28%, 17%);
+}
+
+
+
+/* ==================== FOOTER ==================== */
+.footer__container{
+    position: relative;
+    background-image: url(/img/img1.png);
+    height: 150px;
+    border-radius: 30px;
+}
+
+.footer__container h2{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: "Playfair Display";
+}
