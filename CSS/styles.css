@@ -263,7 +263,7 @@ nav{
     height: 100%;
     width: 40%;
     border-radius: 20px;
-    background-image: url(/img/img28.jpg);
+    background-image: url(./img/img28.jpg);
     background-size: 100%;
 }
 
@@ -336,7 +336,7 @@ nav{
     height: 100%;
     width: 40%;
     border-radius: 20px;
-    background-image: url(/img/img21.jpg);
+    background-image: url(./img/img21.jpg);
     background-size: 100%;
 }
 
@@ -470,7 +470,7 @@ nav{
 /* ==================== FOOTER ==================== */
 .footer__container{
     position: relative;
-    background-image: url(/img/img1.png);
+    background-image: url(./img/img1.png);
     height: 150px;
     border-radius: 30px;
 }
